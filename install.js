@@ -1,6 +1,7 @@
 'use strict';
 
 var Download = require('download'),
+    downloadStatus = require('download-status'),
     os = require('os');
 
 function getIEDriverUrl() {
@@ -17,5 +18,6 @@ if (os.platform() === 'windows') {
   new Download({mode: '755', extract: true})
       .get(getIEDriverUrl())
       .dest('vendor')
+      .use(downloadStatus())
       .run();
 }
