@@ -14,7 +14,7 @@ function getIEDriverUrl() {
   }
 }
 
-if (os.platform() === 'windows') {
+if (os.platform() === 'win32') {
   new Download({mode: '755', extract: true})
       .get(getIEDriverUrl())
       .dest('vendor')
