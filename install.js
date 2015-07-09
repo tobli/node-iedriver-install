@@ -19,5 +19,9 @@ if (os.platform() === 'windows') {
       .get(getIEDriverUrl())
       .dest('vendor')
       .use(downloadStatus())
-      .run();
+      .run(function(err) {
+        if (err) {
+          throw err;
+        }
+      });
 }
