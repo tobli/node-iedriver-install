@@ -9,6 +9,7 @@
     "test": "node test.js"
   },
   "keywords": [
+    "webdriver",
     "iedriver",
     "internet explorer"
   ],
