@@ -1,6 +1,7 @@
 var cp = require('child_process'),
-    iedriver = require('./'),
-    packageVersion = require('./package.json').version;
+  os = require('os'),
+  iedriver = require('./').iedriver;
 
-var helpText = cp.execFileSync(iedriver.binPath(), ['--help']).toString();
-console.log(helpText);
+if (os.platform() === 'win32') {
+  cp.execFileSync(iedriver.binPath(), ['--help']).toString();
+}

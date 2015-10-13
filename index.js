@@ -1,10 +1,11 @@
 'use strict';
 
 var path = require('path'),
-  version = require('./package').version;
+  pkg = require('./package');
 
-module.exports.version = version;
-
-module.exports.binPath = function() {
-  return path.resolve(__dirname, 'vendor', 'IEDriverServer.exe');
+module.exports.iedriver = {
+  version: pkg.version,
+  binPath: function() {
+    return path.resolve(__dirname, 'vendor', 'IEDriverServer.exe');
+  }
 };
