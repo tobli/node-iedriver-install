@@ -5,12 +5,12 @@ var Download = require('download'),
     os = require('os');
 
 function getIEDriverUrl() {
-  var urlBase = 'http://selenium-release.storage.googleapis.com/2.50/';
+  var urlBase = 'http://selenium-release.storage.googleapis.com/2.53/';
 
   if (os.arch() === 'x64') {
-    return urlBase + 'IEDriverServer_x64_2.50.0.zip';
+    return urlBase + 'IEDriverServer_x64_2.53.0.zip';
   } else {
-    return urlBase + 'IEDriverServer_Win32_2.50.0.zip';
+    return urlBase + 'IEDriverServer_Win32_2.53.0.zip';
   }
 }
 
